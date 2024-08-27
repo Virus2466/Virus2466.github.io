@@ -5,101 +5,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dev's Personal Webpage</title>
     <style>
-	body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #f0f0f0; /* Light font color */
-    background-color: #1c1c1c; /* Dark background */
-    margin: 0;
-    padding: 0;
-}
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #f0f0f0; /* Light font color */
+            background-color: #1c1c1c; /* Dark background */
+            margin: 0;
+            padding: 0;
+        }
 
-header {
+        header {
+            color: #f0f0f0; /* Light font color */
+            padding: 1em 0;
+            text-align: center;
+        }
 
-    color: #f0f0f0; /* Light font color */
-    padding: 1em 0; 
-    text-align: center;
-}
+        nav {
+            background-color: #333; /* Dark grey background */
+            padding: 0.5em 0;
+            text-align: center;
+        }
 
-header img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 0.5em;
-}
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
 
-main {
-    padding: 2em;
-    max-width: 800px;
-    margin: auto;
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
 
-    border-radius: 8px;
-}
+        nav ul li a {
+            color: #f0f0f0; /* Light font color */
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-section {
-    margin-bottom: 2em;
-}
+        nav ul li a:hover {
+            color: #1e90ff; /* Dodger Blue link color */
+        }
 
-h1 {
-    margin-top: 0;
-    font-size: 2em;
-}
+        main {
+            padding: 2em;
+            max-width: 800px;
+            margin: auto;
+        }
 
-a {
-    color: #1e90ff; /* Dodger Blue link color */
-    text-decoration: none;
-}
+        section {
+            margin-bottom: 2em;
+        }
 
-a:hover {
-    text-decoration: underline;
-}
+        h1 {
+            margin-top: 0;
+            font-size: 2em;
+        }
 
-.content {
-    padding: 1.5em;
-    border-radius: 8px;
-}
+        a {
+            color: #1e90ff; /* Dodger Blue link color */
+            text-decoration: none;
+        }
 
-footer {
-    background-color: #1c1c1c; /* Dark footer background */
-    color: #f0f0f0; /* Light font color */
-    text-align: center;
-    padding: 0.5em 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
+        a:hover {
+            text-decoration: underline;
+        }
 
-img {
-    display: block;
-    margin: auto;
-    width: 300px;
-    height: 300px;
-}
+        img {
+            display: block;
+            margin: auto;
+            width: 400px;
+            height: 300px;
+        }
 
+        footer {
+				background-color: #1c1c1c; /* Dark footer background */
+				color: #f0f0f0; /* Light font color */
+				text-align: center;
+				padding: 0.5em 0;
+				position: static; /* Change this from fixed to static */
+				width: 100%;
+				bottom: 0;
+        }
+	
+	
 
     </style>
 </head>
 <body>
     <header>
-        
         <h1>Dev's Webpage</h1>
     </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#blog">Blog</a></li>
+        </ul>
+    </nav>
+
     <main>
-        <section>
-            <div class="content">
-			<img src="https://images.unsplash.com/photo-1510981023495-45fca86762e9?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Stars Image">
-                <h2>About Me</h2>
-                <p>Hello! I'm Dev, currently pursuing a Bachelor's degree in Computer Applications. My passion lies in Graphics Programming and Game Development.</p>
-                <p>In the realm of <strong>Graphics Programming</strong>, I am actively learning and experimenting with various graphics APIs such as OpenGL. My goal is to master these tools to create visually compelling and efficient graphics for games and simulations.</p>
-                <p>Some of the key areas I am focusing on include:</p>
-                <ul>
-                    <li>Shader Programming: Crafting custom shaders to achieve unique visual effects.</li>
-                    <li>3D Modeling: Learning techniques for creating and manipulating 3D models and animations.</li>
-                    <li>Game Engine Integration: Integrating graphics with popular game engines like Unity and Unreal Engine.</li>
-                    <li>Performance Optimization: Enhancing the performance of graphics applications to ensure smooth and responsive experiences.</li>
-                </ul>
-                <p>Feel free to check out my projects and contributions on my GitHub profile.</p>
-            </div>
+        <section id="home">
+            <h2>About Me</h2>
+            <img src="image2.gif" alt="Profile">
+            <p><i>Hello :)</i> I'm Dev Patel, currently pursuing a Bachelor's degree in Computer Applications. My passion lies in Graphics Programming and Game Development.</p>
+            <p>In the realm of <strong>Graphics Programming</strong>, I am actively learning and experimenting with various graphics APIs such as OpenGL. My goal is to master these tools to create visually compelling and efficient graphics for games and simulations.</p>
+            <p>Some of the key areas I am focusing on include:</p>
+            <ul>
+                <li>Shader Programming: Crafting custom shaders to achieve unique visual effects.</li>
+                <li>3D Modeling: Learning techniques for creating and manipulating 3D models and animations.</li>
+                <li>Game Engine Integration: Integrating graphics with popular game engines like Unity and Unreal Engine.</li>
+                <li>Performance Optimization: Enhancing the performance of graphics applications to ensure smooth and responsive experiences.</li>
+            </ul>
+            <p>Feel free to check out my projects and contributions on my GitHub profile.</p>
         </section>
-       <section>
+		
+		
+		<section>
 			<div class="content">
 				<h2>Current Learning</h2>
 				<p>At the moment, I am focused on learning <strong>C++</strong> to enhance my skills in Graphics Programming. C++ provides low-level control over hardware, making it ideal for creating high-performance applications, particularly in game development.</p>
@@ -108,11 +131,23 @@ img {
 			</div>
 		</section>
 
+        <section id="projects">
+            <h2>Projects</h2>
+            <p>Project content goes here. List and describe your projects in this section.</p>
+        </section>
+
+        <section id="blog">
+            <h2>Blog</h2>
+            <p>Blog content goes here. Share your thoughts, tutorials, and experiences in this section.</p>
+        </section>
+
         <section>
-            <div class="content">
-                <p>Check out my work and projects on my GitHub profile: <a href="https://github.com/virus2466" target="_blank">github.com/virus2466</a></p>
-            </div>
+            <p>Check out my work and projects on my GitHub profile: <a href="https://github.com/virus2466" target="_blank">github.com/virus2466</a></p>
         </section>
     </main>
+
+    <footer>
+        <p>&copy; 2024 Dev's Webpage. All rights reserved.</p>
+    </footer>
 </body>
 </html>
