@@ -14,7 +14,7 @@
         }
 
         header {
-            color: #f0f0f0; /* Light font color */
+            color: #b888cf; /* Light font color */
             padding: 1em 0;
             text-align: center;
         }
@@ -32,12 +32,12 @@
         }
 
         nav ul li {
-            display: inline;
+            display: inline-block;
             margin: 0 15px;
         }
 
         nav ul li a {
-            color: #f0f0f0; /* Light font color */
+            color: #ffffff; /* Light font color */
             text-decoration: none;
             font-weight: bold;
         }
@@ -48,7 +48,7 @@
 
         main {
             padding: 2em;
-            max-width: 800px;
+            max-width: 90%;
             margin: auto;
         }
 
@@ -73,22 +73,54 @@
         img {
             display: block;
             margin: auto;
-            width: 400px;
-            height: 300px;
+            width: 100%;
+            max-width: 400px;
+            height: auto;
         }
 
         footer {
-				background-color: #1c1c1c; /* Dark footer background */
-				color: #f0f0f0; /* Light font color */
-				text-align: center;
-				padding: 0.5em 0;
-				position: static; /* Change this from fixed to static */
-				width: 100%;
-				bottom: 0;
+            background-color: #1c1c1c; /* Dark footer background */
+            color: #b888cf; /* Light font color */
+            text-align: center;
+            padding: 0.5em 0;
+            position: static; /* Change this from fixed to static */
+            width: 100%;
+            bottom: 0;
         }
-	
-	
 
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            header, main, footer {
+                padding: 1em;
+            }
+
+            main {
+                padding: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5em;
+            }
+
+            h2 {
+                font-size: 1.25em;
+            }
+
+            nav ul li {
+                margin: 5px 0;
+            }
+
+            img {
+                max-width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -107,7 +139,7 @@
 
     <main>
         <section id="home">
-            <h2>About Me</h2>
+            <h2 style="color: #b888cf;">About Me</h2>
             <img src="image2.gif" alt="Profile">
             <p><i>Hello :)</i> I'm Dev Patel, currently pursuing a Bachelor's degree in Computer Applications. My passion lies in Graphics Programming and Game Development.</p>
             <p>In the realm of <strong>Graphics Programming</strong>, I am actively learning and experimenting with various graphics APIs such as OpenGL. My goal is to master these tools to create visually compelling and efficient graphics for games and simulations.</p>
@@ -120,25 +152,23 @@
             </ul>
             <p>Feel free to check out my projects and contributions on my GitHub profile.</p>
         </section>
-		
-		
-		<section>
-			<div class="content">
-				<h2>Current Learning</h2>
-				<p>At the moment, I am focused on learning <strong>C++</strong> to enhance my skills in Graphics Programming. C++ provides low-level control over hardware, making it ideal for creating high-performance applications, particularly in game development.</p>
-				<p>Alongside C++, I'm diving deeper into <strong>Data Structures and Algorithms</strong> to improve my problem-solving skills and to write more efficient code. Understanding these fundamentals is crucial for optimizing game logic and rendering processes.</p>
-				<p>I am also exploring <strong>Linear Algebra</strong>, which is essential for 3D graphics programming. Mastering concepts like vectors, matrices, and transformations will allow me to create more complex and realistic 3D environments.</p>
-			</div>
-		</section>
+
+        <section id="learning">
+            <h2 style="color: #b888cf;">Current Learning</h2>
+            <img src="facts.gif" alt="Learning">
+            <p>At the moment, I am focused on learning <strong>C++</strong> to enhance my skills in Graphics Programming. C++ provides low-level control over hardware, making it ideal for creating high-performance applications, particularly in game development.</p>
+            <p>Alongside C++, I'm diving deeper into <strong>Data Structures and Algorithms</strong> to improve my problem-solving skills and to write more efficient code. Understanding these fundamentals is crucial for optimizing game logic and rendering processes.</p>
+            <p>I am also exploring <strong>Linear Algebra</strong>, which is essential for 3D graphics programming. Mastering concepts like vectors, matrices, and transformations will allow me to create more complex and realistic 3D environments.</p>
+        </section>
 
         <section id="projects">
             <h2>Projects</h2>
-            <p>Project content goes here. List and describe your projects in this section.</p>
+            <p>Projects Coming Soon.</p>
         </section>
 
         <section id="blog">
             <h2>Blog</h2>
-            <p>Blog content goes here. Share your thoughts, tutorials, and experiences in this section.</p>
+            <p>Blogs Coming Soon.</p>
         </section>
 
         <section>
