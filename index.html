@@ -4,124 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dev's Personal Webpage</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #f0f0f0; /* Light font color */
-            background-color: #1c1c1c; /* Dark background */
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            color: #b888cf; /* Light font color */
-            padding: 1em 0;
-            text-align: center;
-        }
-
-        nav {
-            background-color: #333; /* Dark grey background */
-            padding: 0.5em 0;
-            text-align: center;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        nav ul li {
-            display: inline-block;
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: #ffffff; /* Light font color */
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        nav ul li a:hover {
-            color: #1e90ff; /* Dodger Blue link color */
-        }
-
-        main {
-            padding: 2em;
-            max-width: 90%;
-            margin: auto;
-        }
-
-        section {
-            margin-bottom: 2em;
-        }
-
-        h1 {
-            margin-top: 0;
-            font-size: 2em;
-        }
-
-        a {
-            color: #1e90ff; /* Dodger Blue link color */
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        img {
-            display: block;
-            margin: auto;
-            width: 100%;
-            max-width: 400px;
-            height: auto;
-        }
-
-        footer {
-            background-color: #1c1c1c; /* Dark footer background */
-            color: #b888cf; /* Light font color */
-            text-align: center;
-            padding: 0.5em 0;
-            position: static; /* Change this from fixed to static */
-            width: 100%;
-            bottom: 0;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            nav ul li {
-                display: block;
-                margin: 10px 0;
-            }
-
-            header, main, footer {
-                padding: 1em;
-            }
-
-            main {
-                padding: 1em;
-            }
-        }
-
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 1.5em;
-            }
-
-            h2 {
-                font-size: 1.25em;
-            }
-
-            nav ul li {
-                margin: 5px 0;
-            }
-
-            img {
-                max-width: 100%;
-            }
-        }
-    </style>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest"> 
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
     <header>
@@ -140,7 +27,7 @@
     <main>
         <section id="home">
             <h2 style="color: #b888cf;">About Me</h2>
-            <img src="image2.gif" alt="Profile">
+            <img src="images/image2.gif" alt="Profile">
             <p><i>Hello :)</i> I'm Dev Patel, currently pursuing a Bachelor's degree in Computer Applications. My passion lies in Graphics Programming and Game Development.</p>
             <p>In the realm of <strong>Graphics Programming</strong>, I am actively learning and experimenting with various graphics APIs such as OpenGL. My goal is to master these tools to create visually compelling and efficient graphics for games and simulations.</p>
             <p>Some of the key areas I am focusing on include:</p>
@@ -155,7 +42,7 @@
 
         <section id="learning">
             <h2 style="color: #b888cf;">Current Learning</h2>
-            <img src="facts.gif" alt="Learning">
+            <img src="images/facts.gif" alt="Learning">
             <p>At the moment, I am focused on learning <strong>C++</strong> to enhance my skills in Graphics Programming. C++ provides low-level control over hardware, making it ideal for creating high-performance applications, particularly in game development.</p>
             <p>Alongside C++, I'm diving deeper into <strong>Data Structures and Algorithms</strong> to improve my problem-solving skills and to write more efficient code. Understanding these fundamentals is crucial for optimizing game logic and rendering processes.</p>
             <p>I am also exploring <strong>Linear Algebra</strong>, which is essential for 3D graphics programming. Mastering concepts like vectors, matrices, and transformations will allow me to create more complex and realistic 3D environments.</p>
