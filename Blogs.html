@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+    <header>
+        <h1>Setup OpenGL in Visual Studio 2022</h1>
+        <img src="images/gl.jpg" alt="OpenGL">
+    </header>
+    <main>
+        <section id="blogs">
+            <article>
+                <h2>OpenGL</h2>
+                <p><span class="highlight">OpenGL</span> (Open Graphics Library) is a cross-platform and cross-language Application Programming Interface (API) for rendering graphics on the computer system. It covers a wide range of dimensions from 2D to 3D. In this tutorial, we will dissect the process of setting up OpenGL in Windows (Visual Studio 2022).</p>
+
+                <h2>GLFW</h2>
+                <p><span class="highlight">GLFW</span> is an open-source, multi-platform library for OpenGL, OpenGL ES, and Vulkan development on the desktop. It provides a simple API for creating windows, contexts, and surfaces, receiving input and events. We need GLFW to create a window and OpenGL context to render graphics. GLFW is a C library that can be used in C++ programs. First, download the GLFW library from the official website: <a href="https://www.glfw.org/download.html" target="_blank">GLFW</a>.</p>
+                <img class="bimg" src="images/b1.png" alt="GLFW">
+                <p>Extract the zip file into a folder of your choice.</p>
+
+                <h2>Setting Up OpenGL in Visual Studio</h2>
+                <p>Create an empty project in Visual Studio:</p>
+                <img class="vs" src="images/b2.png" alt="Visual Studio Project Setup">
+                <p>After this, if you try to write some OpenGL code, the IDE will throw an error because it doesn't recognize GLFW. We need to add directories for the IDE to understand this code.</p>
+
+                <p>First, add the include directory of GLFW in the project properties. Go to <strong>Project &rarr; Properties &rarr; C/C++ &rarr; General &rarr; Additional Include Directories</strong> and add the path to the include directory of GLFW.</p>
+                <img class="vs" src="images/b3.png" alt="Include Directory">
+
+                <p>Next, add the library directory of GLFW in the project properties. Go to <strong>Project &rarr; Properties &rarr; Linker &rarr; General &rarr; Additional Library Directories</strong> and add the path to the lib directory of GLFW.</p>
+                <img class="vs" src="images/b4.png" alt="Library Directory">
+
+                <p>Finally, add the library files of GLFW in the project properties. Go to <strong>Project &rarr; Properties &rarr; Linker &rarr; Input &rarr; Additional Dependencies</strong> and add the following libraries:</p>
+                <ul>
+                    <li>glfw3.lib</li>
+                    <li>opengl32.lib</li>
+                    <li>gdi32.lib</li>
+                    <li>user32.lib</li>
+                    <li>kernel32.lib</li>
+                    <li>shell32.lib</li>
+                </ul>
+
+                <h2>Check if the Code Runs</h2>
+                <p>Now, copy this code and check if it runs. This is a simple code for creating a window with a "Hello World" title:</p>
+                <pre><code>
+#include &lt;GLFW/glfw3.h&gt;
+
+int main(void)
+{
+    GLFWwindow* window;
+
+    /* Initialize the library */
+    if (!glfwInit())
+        return -1;
+
+    /* Create a windowed mode window and its OpenGL context */
+    window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
+    if (!window)
+    {
+        glfwTerminate();
+        return -1;
+    }
+
+    /* Make the window's context current */
+    glfwMakeContextCurrent(window);
+
+    /* Loop until the user closes the window */
+    while (!glfwWindowShouldClose(window))
+    {
+        /* Render here */
+        glClear(GL_COLOR_BUFFER_BIT);
+
+        /* Swap front and back buffers */
+        glfwSwapBuffers(window);
+
+        /* Poll for and process events */
+        glfwPollEvents();
+    }
+
+    glfwTerminate();
+    return 0;
+}
+                </code></pre>
+
+                <p>After building, you will see the following popup:</p>
+                <img class="vs" src="images/b5.png" alt="Code Output">
+                <p>Congrats! You are all set and ready to go!</p>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
