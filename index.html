@@ -1,82 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dev's Personal Webpage</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest"> 
-    <link rel="stylesheet" href="style.css"> 
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-t" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dev Patel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['Source Code Pro', 'monospace'],
+            },
+            colors: {
+              'brand-white': '#ffffff',
+              'brand-purple': '#7c3aed', // violet-600
+              'brand-purple-dark': '#6d28d9', // violet-700
+              'brand-purple-light': '#f5f3ff', // violet-50
+              'brand-text': '#374151', // gray-700
+              'brand-text-light': '#6b7280', // gray-500
+            },
+            animation: {
+              'fade-in-up': 'fadeInUp 0.5s ease-out forwards',
+              'pulse-glow': 'pulseGlow 2.5s infinite ease-in-out',
+              'bounce-slow': 'bounceSlow 2s infinite',
+              'float': 'float 6s ease-in-out infinite',
+              'typingBlink': 'typingBlink 1s step-end infinite',
+            },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              pulseGlow: {
+                '0%, 100%': { boxShadow: '0 0 15px rgba(124, 58, 237, 0.2)' },
+                '50%': { boxShadow: '0 0 30px rgba(124, 58, 237, 0.5)' },
+              },
+              bounceSlow: {
+                '0%, 100%': {
+                  transform: 'translateY(-20%)',
+                  animationTimingFunction: 'cubic-bezier(0.8,0,1,1)'
+                },
+                '50%': {
+                  transform: 'translateY(0)',
+                  animationTimingFunction: 'cubic-bezier(0,0,0.2,1)'
+                }
+              },
+              float: {
+                '0%': { transform: 'translate(0px, 0px)' },
+                '50%': { transform: 'translate(-10px, 15px)' },
+                '100%': { transform: 'translate(0px, 0px)' },
+              },
+              typingBlink: {
+                  'from, to': { 'border-color': 'transparent' },
+                  '50%': { 'border-color': '#7c3aed' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #ffffff; /* brand-white */
+      }
+      .bg-grid-pattern {
+          background-image:
+            linear-gradient(rgba(124, 58, 237, 0.1) 1px, transparent 1px),
+            linear-gradient(to right, rgba(124, 58, 237, 0.1) 1px, transparent 1px);
+          background-size: 3rem 3rem;
+      }
+    </style>
+
+<link rel="stylesheet" href="/index.css">
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "react/": "https://esm.sh/react@^19.1.0/"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/assets/index-COHxf2AQ.js"></script>
 </head>
-<body>
-    <header>
-        <h1>Dev's Webpage</h1>
-    </header>
-
-    <!-- Navigation Bar -->
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#blog">Blog</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <section id="home">
-            <h2 style="color: #b888cf;">About Me</h2>
-            <img src="images/image2.gif" alt="Profile">
-            <p><i>Hello :)</i> I'm Dev Patel, currently pursuing a Bachelor's degree in Computer Applications. My passion lies in Graphics Programming and Game Development.</p>
-            <p>In the realm of <strong>Graphics Programming</strong>, I am actively learning and experimenting with various graphics APIs such as OpenGL. My goal is to master these tools to create visually compelling and efficient graphics for games and simulations.</p>
-            <p>Some of the key areas I am focusing on include:</p>
-            <ul>
-                <li>Shader Programming: Crafting custom shaders to achieve unique visual effects.</li>
-                <li>3D Modeling: Learning techniques for creating and manipulating 3D models and animations.</li>
-                <li>Game Engine Integration: Integrating graphics with popular game engines like Unity and Unreal Engine.</li>
-                <li>Performance Optimization: Enhancing the performance of graphics applications to ensure smooth and responsive experiences.</li>
-            </ul>
-            <p>Feel free to check out my projects and contributions on my GitHub profile.</p>
-        </section>
-
-        <section id="learning">
-            <h2 style="color: #b888cf;">Current Learning</h2>
-            <img src="images/facts.gif" alt="Learning">
-            <p>At the moment, I am focused on learning <strong>C++</strong> to enhance my skills in Graphics Programming. C++ provides low-level control over hardware, making it ideal for creating high-performance applications, particularly in game development.</p>
-            <p>Alongside C++, I'm diving deeper into <strong>Data Structures and Algorithms</strong> to improve my problem-solving skills and to write more efficient code. Understanding these fundamentals is crucial for optimizing game logic and rendering processes.</p>
-            <p>I am also exploring <strong>Linear Algebra</strong>, which is essential for 3D graphics programming. Mastering concepts like vectors, matrices, and transformations will allow me to create more complex and realistic 3D environments.</p>
-        </section>
-
-        <section id="projects">
-            <img src="images/meetingfull.gif" alt="">
-            <h2>Projects</h2>
-            <p>Projects Coming Soon.</p>
-        </section>
-
-        <section id="blog">
-            <h2>Blogs</h2>
-            <ul>
-                <li>
-                    <time datetime="2025-01-07">2025-01-07</time>: 
-                    <a href="Blogs.html">Setup OpenGL in Visual Studio 2022</a>
-                </li>
-            </ul>
-        </section>
-
-        <section>
-           
-            <p>Check out my work and projects on my GitHub profile: <a href="https://github.com/virus2466" target="_blank">github.com/virus2466</a></p>
-        
-        </section>
-    </main>
-
-
-
-    <footer>
-        <img id="rss" src="images/rss.png" alt="rss">
-        <p>&copy; 2024 Dev's Webpage. All rights reserved. </p>
-        
-    </footer>
+  <body>
+    <div id="root"></div>
 </body>
 </html>
