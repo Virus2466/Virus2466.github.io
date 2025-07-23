@@ -1,95 +1,28 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-t" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dev Patel</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-              mono: ['Source Code Pro', 'monospace'],
-            },
-            colors: {
-              'brand-white': '#ffffff',
-              'brand-purple': '#7c3aed', // violet-600
-              'brand-purple-dark': '#6d28d9', // violet-700
-              'brand-purple-light': '#f5f3ff', // violet-50
-              'brand-text': '#374151', // gray-700
-              'brand-text-light': '#6b7280', // gray-500
-            },
-            animation: {
-              'fade-in-up': 'fadeInUp 0.5s ease-out forwards',
-              'pulse-glow': 'pulseGlow 2.5s infinite ease-in-out',
-              'bounce-slow': 'bounceSlow 2s infinite',
-              'float': 'float 6s ease-in-out infinite',
-              'typingBlink': 'typingBlink 1s step-end infinite',
-            },
-            keyframes: {
-              fadeInUp: {
-                '0%': { opacity: '0', transform: 'translateY(20px)' },
-                '100%': { opacity: '1', transform: 'translateY(0)' },
-              },
-              pulseGlow: {
-                '0%, 100%': { boxShadow: '0 0 15px rgba(124, 58, 237, 0.2)' },
-                '50%': { boxShadow: '0 0 30px rgba(124, 58, 237, 0.5)' },
-              },
-              bounceSlow: {
-                '0%, 100%': {
-                  transform: 'translateY(-20%)',
-                  animationTimingFunction: 'cubic-bezier(0.8,0,1,1)'
-                },
-                '50%': {
-                  transform: 'translateY(0)',
-                  animationTimingFunction: 'cubic-bezier(0,0,0.2,1)'
-                }
-              },
-              float: {
-                '0%': { transform: 'translate(0px, 0px)' },
-                '50%': { transform: 'translate(-10px, 15px)' },
-                '100%': { transform: 'translate(0px, 0px)' },
-              },
-              typingBlink: {
-                  'from, to': { 'border-color': 'transparent' },
-                  '50%': { 'border-color': '#7c3aed' },
-              }
-            }
-          }
-        }
-      }
-    </script>
-    <style>
-      body {
-        background-color: #ffffff; /* brand-white */
-      }
-      .bg-grid-pattern {
-          background-image:
-            linear-gradient(rgba(124, 58, 237, 0.1) 1px, transparent 1px),
-            linear-gradient(to right, rgba(124, 58, 237, 0.1) 1px, transparent 1px);
-          background-size: 3rem 3rem;
-      }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <link rel="stylesheet" href="/index.css">
-  <script type="importmap">
+<script type="importmap">
 {
   "imports": {
-    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
     "react": "https://esm.sh/react@^19.1.0",
-    "react/": "https://esm.sh/react@^19.1.0/"
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/"
   }
 }
 </script>
-  <script type="module" crossorigin src="/assets/index-COHxf2AQ.js"></script>
+  <script type="module" crossorigin src="/assets/index-gMnhEuS9.js"></script>
 </head>
-  <body>
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
 </body>
 </html>
